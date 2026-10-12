@@ -1,14 +1,14 @@
-# IBES Advisory
+# iBES Advisory
 
-Website for IBES Advisory, hosted on Cloudflare Workers.
+Website for iBES Advisory Sdn Bhd, hosted on Cloudflare Workers (static assets).
 
-- `public/` – the website files (edit `public/index.html` to change content)
-- `wrangler.jsonc` – tells Cloudflare to serve the `public/` folder
+## Pages
+- `public/index.html` – Home (about, team, services overview)
+- `public/ipo-services.html` – IPO Services
+- `public/retainer-services.html` – Retainer Services
+- `public/contact.html` – Contact (enquiry form opens the visitor's email app, addressed to ir@ibes-advisory.com)
+- `public/404.html` – Not-found page
 
-Any change pushed to `main` is deployed automatically once the repo is connected in Cloudflare.
+Shared styles and scripts are in `public/assets/`.
 
-## Placeholders to replace
-In `public/index.html`:
-- Email `hello@example.com` and phone `+60 0-000 0000`
-- Stats (years of experience, clients advised)
-- Service descriptions and About text
+Any change pushed to `main` deploys automatically once the repo is connected in Cloudflare.

@@ -3,255 +3,236 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IBES Advisory</title>
-  <meta name="description" content="IBES Advisory provides practical business advisory services: strategy, finance, compliance and growth.">
+  <title>iBES Advisory | Investor Relations Firm, Kuala Lumpur</title>
+  <meta name="description" content="iBES Advisory is an investor relations firm in Kuala Lumpur, Malaysia, specialising in IPO and retainer IR services. Making a good company a good stock.">
+  <meta property="og:title" content="iBES Advisory | Investor Relations Firm, Kuala Lumpur">
+  <meta property="og:description" content="Investor relations firm in Kuala Lumpur specialising in IPO and retainer services.">
+  <meta name="theme-color" content="#0b0b0e">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --ink: #14231f;
-      --ink-soft: #4a5a55;
-      --paper: #f7f5f0;
-      --card: #ffffff;
-      --line: #e3ded3;
-      --accent: #1f5c4a;
-      --accent-soft: #e6efe9;
-      --gold: #b8893a;
-      --max: 1120px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "Inter", system-ui, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.15; }
-    a { color: inherit; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-
-    /* Header */
-    header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(247, 245, 240, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .logo { font-family: "Fraunces", serif; font-size: 1.35rem; font-weight: 600; text-decoration: none; letter-spacing: 0.01em; }
-    .logo span { color: var(--accent); }
-    .nav ul { display: flex; gap: 28px; list-style: none; align-items: center; }
-    .nav a { text-decoration: none; font-size: 0.95rem; color: var(--ink-soft); }
-    .nav a:hover { color: var(--ink); }
-    .btn {
-      display: inline-block; text-decoration: none; font-weight: 500;
-      background: var(--accent); color: #fff !important;
-      padding: 12px 22px; border-radius: 6px; transition: background .2s;
-    }
-    .btn:hover { background: #174637; }
-    .btn-ghost { background: transparent; color: var(--accent) !important; border: 1px solid var(--accent); }
-    .btn-ghost:hover { background: var(--accent-soft); }
-    .nav .btn { padding: 9px 18px; font-size: 0.9rem; }
-
-    /* Hero */
-    .hero { padding: 104px 0 96px; }
-    .eyebrow { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 20px; }
-    .hero h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); max-width: 16ch; margin-bottom: 24px; }
-    .hero p { font-size: 1.15rem; color: var(--ink-soft); max-width: 56ch; margin-bottom: 36px; }
-    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    /* Stats strip */
-    .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--card); }
-    .stats .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .stat { padding: 32px 0; }
-    .stat + .stat { border-left: 1px solid var(--line); padding-left: 32px; }
-    .stat strong { display: block; font-family: "Fraunces", serif; font-size: 2rem; color: var(--accent); }
-    .stat span { color: var(--ink-soft); font-size: 0.95rem; }
-
-    /* Sections */
-    section { padding: 96px 0; }
-    .section-head { max-width: 640px; margin-bottom: 52px; }
-    .section-head h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-bottom: 14px; }
-    .section-head p { color: var(--ink-soft); font-size: 1.05rem; }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-    .card {
-      background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-      padding: 30px 26px; transition: border-color .2s, transform .2s;
-    }
-    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .card .num { font-family: "Fraunces", serif; color: var(--gold); font-size: 0.95rem; margin-bottom: 18px; display: block; }
-    .card h3 { font-size: 1.3rem; margin-bottom: 10px; }
-    .card p { color: var(--ink-soft); font-size: 0.97rem; }
-
-    /* About */
-    .about { background: var(--accent); color: #eef4f0; }
-    .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-    .about h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); color: #fff; }
-    .about p { color: #cfe0d7; margin-bottom: 18px; font-size: 1.05rem; }
-    .about .eyebrow { color: #e3c27f; }
-
-    /* Process */
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: step; }
-    .step { padding: 0 24px 0 0; position: relative; }
-    .step::before {
-      counter-increment: step; content: "0" counter(step);
-      display: block; font-family: "Fraunces", serif; font-size: 1rem; color: var(--accent);
-      border-top: 2px solid var(--accent); padding-top: 16px; margin-bottom: 12px;
-    }
-    .step h3 { font-size: 1.15rem; margin-bottom: 8px; }
-    .step p { color: var(--ink-soft); font-size: 0.95rem; }
-
-    /* Contact */
-    .contact { background: var(--card); border-top: 1px solid var(--line); }
-    .contact .wrap { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; }
-    .contact-list { list-style: none; display: grid; gap: 22px; }
-    .contact-list li { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
-    .contact-list small { display: block; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.75rem; color: var(--ink-soft); margin-bottom: 4px; }
-    .contact-list a, .contact-list span { font-size: 1.1rem; text-decoration: none; }
-    .contact-list a:hover { color: var(--accent); }
-
-    footer { padding: 32px 0; font-size: 0.88rem; color: var(--ink-soft); }
-    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-    @media (max-width: 860px) {
-      .nav ul li:not(:last-child) { display: none; }
-      .about .wrap, .contact .wrap { grid-template-columns: 1fr; gap: 32px; }
-      .steps { grid-template-columns: 1fr 1fr; gap: 36px 0; }
-      .hero { padding: 72px 0 64px; }
-      section { padding: 72px 0; }
-    }
-    @media (max-width: 560px) {
-      .wrap { padding: 0 16px; }
-      .stats .wrap { grid-template-columns: 1fr; }
-      .stat + .stat { border-left: none; border-top: 1px solid var(--line); padding-left: 0; }
-      .steps { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 
-  <header>
-    <div class="wrap nav">
-      <a href="#" class="logo">IBES <span>Advisory</span></a>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#approach">Approach</a></li>
-        <li><a href="#contact" class="btn">Get in touch</a></li>
-      </ul>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="/" class="brand" aria-label="iBES Advisory home">
+      <span class="brand-mark"><i>i</i>BES</span><span class="brand-sub">Advisory</span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="menu">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/ipo-services">IPO Services</a></li>
+      <li><a href="/retainer-services">Retainer Services</a></li>
+      <li><a href="/contact" class="btn">Contact us</a></li>
+    </ul>
+  </div>
+</header>
 
-  <main>
-    <div class="wrap hero">
-      <p class="eyebrow">Business Advisory</p>
-      <h1>Clear advice for decisions that matter.</h1>
-      <p>We help founders and growing businesses plan with confidence, from strategy and financial planning to compliance and expansion.</p>
-      <div class="actions">
-        <a href="#contact" class="btn">Book a consultation</a>
-        <a href="#services" class="btn btn-ghost">Our services</a>
+<main>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="grid-bg"></div>
+    <div class="glow"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <span class="label reveal">Investor Relations · Kuala Lumpur</span>
+        <h1 class="reveal d1">Making a good company <em>a good stock.</em></h1>
+        <p class="lead reveal d2">We help issuers tell their story to the investment community, from IPO preparation to ongoing investor relations, so the market sees the value you have built.</p>
+        <div class="actions reveal d3">
+          <a href="/contact" class="btn">Speak with us
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#services" class="btn btn-ghost">Explore services</a>
+        </div>
+      </div>
+
+      <div class="ticker-card reveal d2" aria-hidden="true">
+        <div class="ticker-head">
+          <span class="sym">EQUITY STORY</span>
+          <span class="chg"><span class="pulse"></span>MARKET-READY</span>
+        </div>
+        <div class="ticker-big">Good company → <em style="color:var(--gold);font-style:italic">good stock</em></div>
+        <svg class="chart" viewBox="0 0 400 150" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e0c56e" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#e0c56e" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g stroke="rgba(255,255,255,.06)" stroke-width="1">
+            <line x1="0" y1="37" x2="400" y2="37"/><line x1="0" y1="75" x2="400" y2="75"/><line x1="0" y1="112" x2="400" y2="112"/>
+          </g>
+          <path class="area" d="M0,128 L30,122 L60,126 L95,112 L130,116 L165,98 L200,102 L235,82 L270,86 L305,60 L340,48 L370,34 L400,22 L400,150 L0,150 Z"/>
+          <path class="line" d="M0,128 L30,122 L60,126 L95,112 L130,116 L165,98 L200,102 L235,82 L270,86 L305,60 L340,48 L370,34 L400,22"/>
+          <circle cx="400" cy="22" r="4"/>
+        </svg>
+        <div class="ticker-stats">
+          <div><span>Positioning</span><strong>Equity story</strong></div>
+          <div><span>Visibility</span><strong>Analysts &amp; media</strong></div>
+          <div><span>Outcome</span><strong>Investor trust</strong></div>
+        </div>
       </div>
     </div>
+    <div class="scroll-cue">Scroll</div>
+  </div>
 
-    <div class="stats">
-      <div class="wrap">
-        <div class="stat"><strong>10+</strong><span>Years of experience</span></div>
-        <div class="stat"><strong>100+</strong><span>Clients advised</span></div>
-        <div class="stat"><strong>1:1</strong><span>Personal, partner-led service</span></div>
-      </div>
-    </div>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">What we do</p>
-          <h2>Services built around your stage of growth</h2>
-          <p>Whether you're starting out or scaling up, we give you practical advice you can act on.</p>
-        </div>
-        <div class="grid">
-          <article class="card">
-            <span class="num">01</span>
-            <h3>Business Strategy</h3>
-            <p>Market positioning, business planning and growth roadmaps that turn goals into clear next steps.</p>
-          </article>
-          <article class="card">
-            <span class="num">02</span>
-            <h3>Financial Advisory</h3>
-            <p>Budgeting, cash-flow planning, forecasting and funding readiness for sound financial decisions.</p>
-          </article>
-          <article class="card">
-            <span class="num">03</span>
-            <h3>Compliance &amp; Setup</h3>
-            <p>Company incorporation, regulatory guidance and governance so your business runs on solid ground.</p>
-          </article>
-          <article class="card">
-            <span class="num">04</span>
-            <h3>Growth &amp; Expansion</h3>
-            <p>Support for entering new markets, partnerships and operational improvements as you scale.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <div class="wrap">
-        <div>
-          <p class="eyebrow">About us</p>
-          <h2>A trusted partner, not just a consultant.</h2>
-        </div>
-        <div>
-          <p>IBES Advisory was founded to give businesses access to experienced, straightforward advice without the overhead of a large firm.</p>
-          <p>We take time to understand how your business works, then focus on the few changes that will make the biggest difference.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="approach">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">How we work</p>
-          <h2>A simple, transparent process</h2>
-        </div>
-        <div class="steps">
-          <div class="step"><h3>Discover</h3><p>A free first conversation to understand your goals and challenges.</p></div>
-          <div class="step"><h3>Assess</h3><p>We review your numbers, operations and market to find what matters most.</p></div>
-          <div class="step"><h3>Plan</h3><p>You receive clear recommendations with priorities and timelines.</p></div>
-          <div class="step"><h3>Support</h3><p>We stay alongside you as you put the plan into action.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Contact</p>
-          <h2>Let's talk about your business</h2>
-          <p>Reach out for a no-obligation consultation. We usually reply within one business day.</p>
-          <div class="actions" style="margin-top:28px">
-            <a href="mailto:hello@example.com" class="btn">Email us</a>
-          </div>
-        </div>
-        <ul class="contact-list">
-          <li><small>Email</small><a href="mailto:hello@example.com">hello@example.com</a></li>
-          <li><small>Phone</small><a href="tel:+60000000000">+60 0-000 0000</a></li>
-          <li><small>Location</small><span>Kuala Lumpur, Malaysia</span></li>
-          <li><small>Hours</small><span>Mon – Fri, 9:00 am – 6:00 pm</span></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+  <!-- About -->
+  <section id="about">
     <div class="wrap">
-      <span>&copy; <span id="yr">2026</span> IBES Advisory. All rights reserved.</span>
-      <a href="#">Back to top ↑</a>
-    </div>
-  </footer>
+      <div class="belief">
+        <div class="reveal">
+          <span class="label">About us</span>
+          <h2>Our belief is <em>simple.</em></h2>
+        </div>
+        <div class="belief-body">
+          <p class="first reveal">Every entrepreneur has a story to tell. The ability to set yourself apart with an engaging story is essential to winning over investors.</p>
+          <p class="reveal d1">Every piece of content we produce is created to deliver value to you. Our pursuit is to transform a good company into a good stock, with the right solutions.</p>
+          <div class="signature reveal d2">Turn your passion into a legacy.</div>
+        </div>
+      </div>
 
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+      <div class="metrics reveal" style="margin-top:110px">
+        <div class="metric"><strong>2017</strong><span>Established in Kuala Lumpur</span></div>
+        <div class="metric"><strong>40<sup>+</sup></strong><span>Years of combined capital markets experience</span></div>
+        <div class="metric"><strong>24<sup>yrs</sup></strong><span>Institutional, corporate &amp; private client equities sales</span></div>
+        <div class="metric"><strong>16<sup>yrs</sup></strong><span>Corporate finance advisory &amp; equity capital markets</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thesis -->
+  <section class="thesis">
+    <div class="glow"></div>
+    <div class="wrap thesis-inner">
+      <blockquote class="reveal">We communicate your investment thesis effectively to <em>the right audience</em> for a result-oriented outcome.</blockquote>
+      <div class="thesis-side reveal d2">
+        <p>With our experience servicing local and global investment funds, we have a deep understanding of how investors think and make strategic investment decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="label">Our services</span>
+        <h2>Investor relations for every <em>stage of listing.</em></h2>
+        <p>From preparing for your IPO to keeping the market engaged after listing, our services cover the full journey.</p>
+      </div>
+      <div class="svc-grid">
+        <a href="/ipo-services" class="svc reveal">
+          <div>
+            <span class="svc-num">01 / IPO</span>
+            <h3>IPO Services</h3>
+            <div class="tag">Start on the right footing</div>
+            <p>Positioning your company, building the equity story and preparing management to meet investors, analysts and the media.</p>
+            <ul><li>Equity story</li><li>Quantitative analysis</li><li>IPO collaterals</li><li>Roadshow training</li><li>Listing ceremonies</li></ul>
+          </div>
+          <span class="go">View IPO services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="/retainer-services" class="svc reveal d1">
+          <div>
+            <span class="svc-num">02 / RETAINER</span>
+            <h3>Retainer Services</h3>
+            <div class="tag">Keeping the light on</div>
+            <p>Ongoing investor relations that keeps your company visible, understood and well-covered long after listing day.</p>
+            <ul><li>Analyst sessions</li><li>Research monitoring</li><li>Press releases</li><li>Shareholding spread</li><li>Annual reports</li></ul>
+          </div>
+          <span class="go">View retainer services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- Team -->
+  <section id="team">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="label">Our team</span>
+        <h2>Hello. <em>We see things differently.</em></h2>
+        <p>Our depth of investment banking experience delivers optimal equity solutions.</p>
+      </div>
+      <div class="team-grid">
+        <article class="member reveal">
+          <div class="avatar">HB</div>
+          <h3>Hon Boon Hui</h3>
+          <div class="role">Managing Partner</div>
+          <p>Equities sales experience spanning institutional, corporate and private clients, bringing an unparalleled understanding of both the market and investors' behaviour.</p>
+          <div class="yrs">
+            <div><strong>13</strong><span>yrs institutional</span></div>
+            <div><strong>11</strong><span>yrs corporate &amp; private</span></div>
+          </div>
+        </article>
+        <article class="member reveal d1">
+          <div class="avatar">SY</div>
+          <h3>Sandy Yap</h3>
+          <div class="role">Chief Executive Officer</div>
+          <p>Corporate finance advisory and equity capital markets experience. Familiar with regulatory guidelines, with a blend of deal structuring and equity distribution experience.</p>
+          <div class="yrs">
+            <div><strong>16</strong><span>yrs CF advisory &amp; ECM</span></div>
+          </div>
+        </article>
+        <article class="member reveal d2">
+          <div class="avatar">K</div>
+          <h3>Kumanan</h3>
+          <div class="role">Manager</div>
+          <p>Client coverage experience across both equity and debt deals, having previously gained exposure at a key local investment bank.</p>
+          <div class="yrs">
+            <div><strong>Equity</strong><span>&amp; debt deal coverage</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="glow"></div>
+    <div class="cta-inner">
+      <span class="label reveal">Let's talk</span>
+      <h2 class="reveal d1">Ready to tell your <em>story to the market?</em></h2>
+      <p class="reveal d2">Whether you're planning an IPO or looking for ongoing investor relations support, we'd like to hear from you.</p>
+      <div class="actions reveal d3">
+        <a href="/contact" class="btn">Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="mailto:ir@ibes-advisory.com" class="btn btn-ghost">ir@ibes-advisory.com</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a href="/" class="brand"><span class="brand-mark"><i>i</i>BES</span><span class="brand-sub">Advisory</span></a>
+        <p>Investor relations firm in Kuala Lumpur, specialising in IPO and retainer services.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul><li><a href="/ipo-services">IPO Services</a></li><li><a href="/retainer-services">Retainer Services</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="/#about">About</a></li><li><a href="/#team">Team</a></li><li><a href="/contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Office</h4>
+        <address>VO3-05-05, Designer Office,<br>Lingkaran SV, Sunway Velocity,<br>55100 Kuala Lumpur, Malaysia</address>
+        <ul style="margin-top:12px"><li><a href="mailto:ir@ibes-advisory.com">ir@ibes-advisory.com</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2017 – <span id="yr">2026</span> iBES Advisory Sdn Bhd (1237350-U). All rights reserved.</span>
+      <span>Kuala Lumpur, Malaysia</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
 </body>
 </html>
